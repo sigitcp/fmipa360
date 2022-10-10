@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>test fmipa360</title>
+		<!--projectdescription--><meta name="description" content="New 3Sixty Virtual Tour Project"><!--projectdescription-end-->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+		
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="style1.css">
+		<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+		
+		<!-- Insert this line above script imports  -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		
+		<script src="imagedata.js"></script>
+		<script src="jquery.js"></script>
+		<script src="three.min.js"></script>
+		<script src="panolens.min.js"></script>
+		
+		<!-- Insert this line after script imports -->
+		<script>if (window.module) module = window.module;</script>
+		
+		<style>
+		
+			
+						
+			/* SCROLLBAR STYLING */
+			/* width */
+			::-webkit-scrollbar {
+				width: 6px;
+				height: 6px;
+			}
+			/* Track */
+			::-webkit-scrollbar-track {
+				background: inherit; 
+			}
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background: white; 
+				transition: background .1s;
+			}
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #ff6600; 
+			}
+
+
+			html, body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: white;
+				color: white;
+			}
+
+			a:link, a:visited{
+				color: #bdc3c7;	
+			}
+
+			.fullwrapper{
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: white;
+			}
+			
+			#container {
+                width: 100%;
+                height: 100%;
+            }
+			
+			#tmp{
+				position: fixed;
+				top: 0;
+				left: 0; 
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,.5);
+				backdrop-filter: blur(5px);
+				display: none;
+			}
+		</style>
+	</head>
+
+<body>
+	<div id="wrapper">
+		<div class="nav sidebar-nav">
+			<button href="#menu-toggle" id="menu-toggle" class="btn btn-primary shadow-inset ml-8 mt-2"><i
+					class="fa fa-bars" style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i>
+			</button>
+			<div id="sidebar-wrapper">
+
+				<ul class="sidebar-nav" style="margin-left:0;">
+					<li class="sidebar-brand">
+						<a class="navbar-brand text-gray" href=""><img
+								src="../assets/img/Lambang_Universitas_Tanjungpura.png" width="Logo"> FMIPA 360</a>
+					</li>
+
+				<table class="table table-borderless" id="dataTable" cellspacing="0">
+					<thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                    </thead>
+					<tbody>
+					<tr>
+						<td>
+								
+								<button type="button" id="pano1" class="btn btn-primary btn-block mb-2" tabindex="0">area 1</button>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+								
+								<button type="button" id="pano2" class="btn btn-primary btn-block mb-2" tabindex="0">area 2</button>
+							
+						</td>
+					</tr>
+					
+					</tbody>
+				</table>
+			
+				</ul>
+			</div>
+		</div>
+		<script>
+			$("#menu-toggle").click(function (e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
+		</script>
+		<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="datatable.js"></script>
+	</div>
+</body>
+
+
+
+
+	<body id="body">
+	    <div id="container" style="color: white;"></div>
+    	<div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%;">
+    		<div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+    			<!--loadingtext--><p>Please Wait...</p><!--loadingtext-end-->
+    		</div>
+    	</div>
+		
+		<div id="tmp">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content shadow-inset">
+                            <div class="modal-body">
+                                <button type="button" class="btn btn-primary close mb-2" onclick="hideTemp()">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <div id="tmpcontent">
+                            </div>
+                        </div>
+                    </div>
+		</div>
+	</body>
+
+
+<body>
+    	<script>
+			
+            var container = document.querySelector( '#container' );
+			/*panolens*/
+            var viewer = new PANOLENS.Viewer( { container: container , controlBar: false,  output: 'console' , autoHideInfospot: false, } );
+			/*panolens-end*/
+			
+			viewer.addUpdateCallback(function(){});
+			
+			/*panoramas*/
+var pano1 = new PANOLENS.ImagePanorama( "panoramas/pano1.jpg" );
+						pano1.addEventListener('progress', function(e){
+							$("#loading").show();
+						});
+						pano1.addEventListener('load', function(e){
+							$("#loading").fadeOut();
+						});
+						pano1.addEventListener('click', function(e){
+						});
+
+var infospotpano10 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+							infospotpano10.position.set( -2710.56, -485.24, 4161.94 );
+							pano1.add(infospotpano10);
+infospotpano10.addEventListener('click', function(){
+viewer.setPanorama( pano2 );
+});
+var infospotpano11 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+							infospotpano11.position.set( -668.46, -4934.67, 439.57 );
+							pano1.add(infospotpano11);
+infospotpano11.addEventListener('click', function(){
+showMedia(1, 'images/poin1.jpg');
+});
+var infospotpano12 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+							infospotpano12.position.set( -2342.18, -82.81, -4406.89 );
+							pano1.add(infospotpano12);
+infospotpano12.addEventListener('click', function(){
+showMedia(1, 'images/detailbatu.jpg');
+});
+
+viewer.add( pano1 );
+var pano2 = new PANOLENS.ImagePanorama( "panoramas/pano2.jpg" );
+						pano2.addEventListener('progress', function(e){
+							$("#loading").show();
+						});
+						pano2.addEventListener('load', function(e){
+							$("#loading").fadeOut();
+						});
+						pano2.addEventListener('click', function(e){
+						});
+
+var infospotpano20 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+							infospotpano20.position.set( -3781.47, -2344.25, -2269.32 );
+							pano2.add(infospotpano20);
+infospotpano20.addEventListener('click', function(){
+viewer.setPanorama( pano1 );
+});
+var infospotpano21 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+							infospotpano21.position.set( 360.32, -4966.26, 411.25 );
+							pano2.add(infospotpano21);
+infospotpano21.addEventListener('click', function(){
+showMedia(1, 'images/poin2.jpg');
+});
+viewer.add( pano2 );
+$(document).ready(function(){ viewer.setPanorama( pano1 ); });
+
+document.getElementById("pano2").addEventListener('click',function(){
+viewer.setPanorama( pano2 );
+});
+document.getElementById("pano1").addEventListener('click',function(){
+viewer.setPanorama( pano1 );
+});
+
+/*panoramas-end*/
+            
+			
+			function hideTemp(){
+				$("#tmp").fadeOut();
+				setTimeout(function(){
+					$("#tmpcontent").html("");
+				},1000);
+			}
+			
+			function showMedia(type, content){
+				switch(type){
+					case 1 :
+						//Image
+						$("#tmpcontent").html("<img src='"+content+"' style='width: 100%;'>");
+						$("#tmp").fadeIn();
+						break;
+					case 2 :
+						//Video
+						$("#tmpcontent").html("<video id='webvideo' controls autoplay style='width: 100%; height: 100%;'><source src='" +content+ "' type='video/mp4'> Your browser does not support the video tag. </video>");
+						$("#tmp").fadeIn();
+						break;
+					case 3 :
+						//Audio
+						$("#tmpcontent").html("<audio controls style='width: 100%;'><source src='"+content+"' type='audio/ogg'>Your browser does not support the audio tag.</audio>");
+						$("#tmp").fadeIn();
+						break;
+					case 4 :
+						//PDF
+						$("#tmpcontent").html("<iframe src='pdfjs/web/viewer.html?file=../../"+content+"' style='width: 100%; height: 100%;'></iframe>");
+						$("#tmp").fadeIn();
+						break;
+				}
+			}
+        </script>
+	</body>
+</html>
