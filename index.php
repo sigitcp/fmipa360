@@ -350,10 +350,10 @@ require 'UserControllers/HomeControllers.php';
                             <div class="row justify-content-center">
                                 <div class="col-12">
                                     <div class="shadow-inset p-4 mb-5 rounded">
-                                        <iframe class="map rounded"
+                                        <!-- <iframe class="map rounded"
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599127523ec9%3A0x752e4fa340c5556d!2sFaculty%20of%20Math%20and%20Science!5e0!3m2!1sen!2sid!4v1659164539498!5m2!1sen!2sid"></iframe>
                                         <iframe class="map rounded"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5997490ab8af%3A0xb02b9eb4bf2f6b94!2sGedung%20Baru%20FMIPA%20Untan!5e0!3m2!1sen!2sid!4v1659165046659!5m2!1sen!2sid"></iframe>
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5997490ab8af%3A0xb02b9eb4bf2f6b94!2sGedung%20Baru%20FMIPA%20Untan!5e0!3m2!1sen!2sid!4v1659165046659!5m2!1sen!2sid"></iframe> -->
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-8 text-center mb-5">

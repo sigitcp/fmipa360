@@ -24,17 +24,19 @@
 
     <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 </head>
+
 <body>
     <section class="mt-5" id="room">
-        <div class="section section-lg pt-0" >
+        <div class="section section-lg pt-0">
 
 
-             <div class="container">
+            <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-8 text-center mb-3">
                         <h1 class="display-2 font-weight-light">Select <span class="font-weight-bold">Building</span>
                         </h1>
-                        <p class="lead">Choose one of the buildings in the Faculty of Mathematics and Natural Sciences, Tanjungpura university to start the extraordinary experience of the virtual tour</p>
+                        <p class="lead">Choose one of the buildings in the Faculty of Mathematics and Natural Sciences,
+                            Tanjungpura university to start the extraordinary experience of the virtual tour</p>
                     </div>
                 </div>
             </div>
@@ -43,52 +45,61 @@
             <div class="container">
                 <div class="row">
 
-                              <div class="col-12 col-md-6 col-lg-4 mb-5">
-                <div class="card bg-primary border-light shadow-soft">
-                    <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top" alt="Themesberg office">
-                    <div class="card-body">
-                        <h3 class="h3 card-title mt-3">FMIPA UNTAN Gedung Baru</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="virtualtour/virtual_test/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="card bg-primary border-light shadow-soft">
+                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h3 class="card-title mt-2">FMIPA UNTAN Gedung Baru
+                                </h3>
+                                <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
+                                </p>
+                                <a href="virtualtour/gbrvirtualtour/"
+                                    class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-<!-- -------------------------------------------------------------------------------------------------- -->
-                    
-                           <div class="col-12 col-md-6 col-lg-4 mb-5">
-                <div class="card bg-primary border-light shadow-soft">
-                    <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top" alt="Themesberg office">
-                    <div class="card-body">
-                        <h3 class="h3 card-title mt-3">FMIPA UNTAN Gedung Lama</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                    <!-- -------------------------------------------------------------------------------------------------- -->
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="card bg-primary border-light shadow-soft">
+                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top"
+                                alt="Themesberg office">
+                            <div class="card-body">
+                                <h3 class="h3 card-title mt-2">FMIPA UNTAN Gedung Lama</h3>
+                                <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
+                                </p>
+                                <a href="irtualtour/glmvirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-<!-- -------------------------------------------------------------------------------------------------- -->
-                              <div class="col-12 col-md-6 col-lg-4 mb-5">
-                <div class="card bg-primary border-light shadow-soft">
-                    <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top" alt="Themesberg office">
-                    <div class="card-body">
-                        <h3 class="h3 card-title mt-3">FMIPA UNTAN Gedung Biotek</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                    <!-- -------------------------------------------------------------------------------------------------- -->
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="card bg-primary border-light shadow-soft">
+                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top"
+                                alt="Themesberg office">
+                            <div class="card-body">
+                                <h3 class="h3 card-title mt-2">FMIPA UNTAN Gedung Biotek</h3>
+                                <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
+                                </p>
+                                <a href="irtualtour/biovirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-<!-- -------------------------------------------------------------------------------------------------- -->
-<div class="col-12 col-md-6 col-lg-4 mb-5">
-                <div class="card bg-primary border-light shadow-soft">
-                    <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top" alt="Themesberg office">
-                    <div class="card-body">
-                        <h3 class="h3 card-title mt-3">FMIPA UNTAN Gedung Siskom</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                    <!-- -------------------------------------------------------------------------------------------------- -->
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="card bg-primary border-light shadow-soft">
+                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top"
+                                alt="Themesberg office">
+                            <div class="card-body">
+                                <h3 class="h3 card-title mt-2">FMIPA UNTAN Gedung Siskom</h3>
+                                <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
+                                </p>
+                                <a href="irtualtour/sisvirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-<!-- -------------------------------------------------------------------------------------------------- -->
+                    <!-- -------------------------------------------------------------------------------------------------- -->
 
                 </div>
             </div>
@@ -96,118 +107,74 @@
     </section>
 
 
-<!-- Section -->
-           <section class="">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-12 col-lg-12 mb-5">
-                        <!-- Contact Card -->
-                        <div class="card bg-primary shadow-soft border-light p-2 p-md-3 p-lg-5">
-                            <div class="card-header">
-                                <div class="row justify-content-center">
-                                    <div class="col-12 col-md-8 text-center mb-5">
-                                        <h1 class="display-2 mb-3"><span class="font-weight-bold">Button</span> Hint</h1>
-                                        <p class="lead">help you understand the function of each button that will be presented in your virtual tour.</p>
-                                    </div>
-                                </div>
-                                <div class="row mb-5">
-                                    <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Visit Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
-                                                <span class="fas fa-map-marker-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">Visit us</h2>
-                                            <span>
-                                                27 
-                                                USA, California
-                                            </span>
-                                        </div>
-                                        <!-- End of Visit Box -->
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Call Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
-                                                <span class="fas fa-map-marker-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">Visit us</h2>
-                                            <span>
-                                                27 
-                                                USA, California
-                                            </span>
-                                        </div>
-                                        <!-- End of Call Box -->
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Email Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
-                                                <span class="fas fa-map-marker-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">Visit us</h2>
-                                            <span>
-                                                27 
-                                                USA, California
-                                            </span>
-                                        </div>
-                                        <!-- End of Email Box -->
-                                    </div>
-                                      <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Email Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
-                                                <span class="fas fa-map-marker-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">Visit us</h2>
-                                            <span>
-                                                27 
-                                                USA, California
-                                            </span>
-                                        </div>
-                                        <!-- End of Email Box -->
-                                    </div>
-                                      <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Email Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
-                                                <span class="fas fa-map-marker-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">Visit us</h2>
-                                            <span>
-                                                27 
-                                                USA, California
-                                            </span>
-                                        </div>
-                                        <!-- End of Email Box -->
-                                    </div>
-                                      <div class="col-md-4 col-lg-4 text-center">
-                                        <!-- Email Box -->
-                                        <div class="icon-box mb-4">
-                                            <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
-                                                <span class="fas fa-map-marker-alt"></span>
-                                            </div>
-                                            <h2 class="h5 icon-box-title">Visit us</h2>
-                                            <span>
-                                                27 
-                                                USA, California
-                                            </span>
-                                        </div>
-                                        <!-- End of Email Box -->
-                                    </div>
-
+    <!-- Section -->
+    <section class="">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 col-lg-12 mb-5">
+                    <!-- Contact Card -->
+                    <div class="card bg-primary shadow-soft border-light p-2 p-md-3 p-lg-5">
+                        <div class="card-header">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-8 text-center mb-5">
+                                    <h1 class="display-2 mb-3"><span class="font-weight-bold">Button</span> Hint</h1>
+                                    <p class="lead">help you understand the function of each button that will be
+                                        presented in your virtual tour.</p>
                                 </div>
                             </div>
+                            <div class="row mb-5">
+                                <div class="col-md-4 col-lg-4 text-center">
+                                    <!-- Visit Box -->
+                                    <div class="icon-box mb-4">
+                                        <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
+                                            <img src="assets/img/infospot.png" width="60">
+                                        </div>
+                                        <h2 class="h5 icon-box-title">Detail</h2>
+                                        <span>
+                                        room name details
+                                        </span>
+                                    </div>
+                                    <!-- End of Visit Box -->
+                                </div>
+                                <div class="col-md-4 col-lg-4 text-center">
+                                    <!-- Call Box -->
+                                    <div class="icon-box mb-4">
+                                        <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
+                                            <img src="assets/img/cirle1.png" width="60">
+                                        </div>
+                                        <h2 class="h5 icon-box-title">Point</h2>
+                                        <span>
+                                            Current location details
+                                        </span>
+                                    </div>
+                                    <!-- End of Call Box -->
+                                </div>
+                                <div class="col-md-4 col-lg-4 text-center">
+                                    <!-- Email Box -->
+                                    <div class="icon-box mb-4">
+                                        <div class="icon icon-shape shadow-inset border-light rounded-circle mb-4">
+                                            <img src="assets/img/arrow.png" width="60">
+                                        </div>
+                                        <h2 class="h5 icon-box-title">Next</h2>
+                                        <span>
+                                            switch scenes
+                                        </span>
+                                    </div>
+                                    <!-- End of Email Box -->
+                                </div>
+
+                            </div>
                         </div>
-                        <!-- End of Contact Card -->
                     </div>
+                    <!-- End of Contact Card -->
                 </div>
             </div>
-        </section>
-        <!-- End of section -->
+        </div>
+    </section>
+    <!-- End of section -->
 
-        
-        <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
+
+    <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -225,26 +192,26 @@
     </footer>
 
     <!-- Core -->
-<script src="./vendor/jquery/dist/jquery.min.js"></script>
-<script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
-<script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="./vendor/headroom.js/dist/headroom.min.js"></script>
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./vendor/headroom.js/dist/headroom.min.js"></script>
 
-<!-- Vendor JS -->
-<script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
-<script src="./vendor/nouislider/distribute/nouislider.min.js"></script>
-<script src="./vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="./vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-<script src="./vendor/jarallax/dist/jarallax.min.js"></script>
-<script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
-<script src="./vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
-<script src="./vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script src="./vendor/prismjs/prism.js"></script>
+    <!-- Vendor JS -->
+    <script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="./vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="./vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="./vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="./vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="./vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="./vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./vendor/prismjs/prism.js"></script>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<!-- Neumorphism JS -->
-<script src="./assets/js/neumorphism.js"></script>
+    <!-- Neumorphism JS -->
+    <script src="./assets/js/neumorphism.js"></script>
 </body>
 
 </html>
