@@ -47,7 +47,7 @@
 
                     <div class="col-12 col-md-6 col-lg-3 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top">
+                            <img src="assets/img/baru.jpg" class="card-img-top rounded-top">
                             <div class="card-body">
                                 <h3 class="card-title mt-2">FMIPA UNTAN Gedung Baru
                                 </h3>
@@ -63,39 +63,39 @@
 
                     <div class="col-12 col-md-6 col-lg-3 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top"
-                                alt="Themesberg office">
+                            <img src="assets/img/lama.jpg" class="card-img-top rounded-top"
+                                >
                             <div class="card-body">
                                 <h3 class="h3 card-title mt-2">FMIPA UNTAN Gedung Lama</h3>
                                 <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
                                 </p>
-                                <a href="irtualtour/glmvirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                                <a href="virtualtour/glmvirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
                             </div>
                         </div>
                     </div>
                     <!-- -------------------------------------------------------------------------------------------------- -->
                     <div class="col-12 col-md-6 col-lg-3 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top"
-                                alt="Themesberg office">
+                            <img src="assets/img/biotek.png" class="card-img-top rounded-top"
+                                >
                             <div class="card-body">
                                 <h3 class="h3 card-title mt-2">FMIPA UNTAN Gedung Biotek</h3>
                                 <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
                                 </p>
-                                <a href="irtualtour/biovirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                                <a href="virtualtour/biovirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
                             </div>
                         </div>
                     </div>
                     <!-- -------------------------------------------------------------------------------------------------- -->
                     <div class="col-12 col-md-6 col-lg-3 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="assets/img/blog/blog-article-1.jpg" class="card-img-top rounded-top"
-                                alt="Themesberg office">
+                            <img src="assets/img/siskom.jpg" class="card-img-top rounded-top"
+                                >
                             <div class="card-body">
                                 <h3 class="h3 card-title mt-2">FMIPA UNTAN Gedung Siskom</h3>
                                 <p style="text-align:center" class="display-5 shadow-inset rounded">V1.0 august 2022
                                 </p>
-                                <a href="irtualtour/sisvirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
+                                <a href="virtualtour/sisvirtualtour/" class="btn btn-primary btn-block text-success font-weight-bold">Start</a>
                             </div>
                         </div>
                     </div>
