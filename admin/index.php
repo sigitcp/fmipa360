@@ -61,6 +61,11 @@ require '../AdminControllers/DashboardControllers.php';
                                         class="fas fa-map-signs mr-2"></span>Siskom</button>
                             </a>
                         </div>
+                        <a class="nav-link" href="">
+                            <button type="button" class="btn shadow-inset btn-primary btn-block" tabindex="0"><span
+                                    class=""></span>Data raw</button>
+                        </a>
+                        
                     </div>
                 </div>
                 <a class="sb-sidenav-footer" href="Logout.php">
@@ -86,8 +91,8 @@ require '../AdminControllers/DashboardControllers.php';
                             <div class="card shadow-inset">
 
                                 <div class="card-body">
-                                    <h5 class="card-title display-5 text-info">Ruangan Gedung Baru</h5>
-                                    <p class="card-text display-2 text-center text-success">23<span
+                                    <h5 class="card-title display-5 text-info">Denah Gedung Baru</h5>
+                                    <p class="card-text display-2 text-center text-success"><?= $countgbr?><span
                                             class="text-danger font-small"> Ruangan</span></p>
                                 </div>
 
@@ -95,8 +100,8 @@ require '../AdminControllers/DashboardControllers.php';
                             <div class="card shadow-inset">
 
                                 <div class="card-body">
-                                    <h5 class="card-title display-5 text-info">Ruangan Gedung Lama</h5>
-                                    <p class="card-text display-2 text-center text-success">23<span
+                                    <h5 class="card-title display-5 text-info">Denah Gedung Lama</h5>
+                                    <p class="card-text display-2 text-center text-success"><?= $countglm?><span
                                             class="text-danger font-small"> Ruangan</span></p>
                                 </div>
 
@@ -104,8 +109,17 @@ require '../AdminControllers/DashboardControllers.php';
                             <div class="card shadow-inset">
 
                                 <div class="card-body">
-                                    <h5 class="card-title display-5 text-info">Ruangan Biotek</h5>
-                                    <p class="card-text display-2 text-center text-success">23<span
+                                    <h5 class="card-title display-5 text-info">Denah Biotek</h5>
+                                    <p class="card-text display-2 text-center text-success"><?= $countbio?><span
+                                            class="text-danger font-small"> Ruangan</span></p>
+                                </div>
+
+                            </div>
+                            <div class="card shadow-inset">
+
+                                <div class="card-body">
+                                    <h5 class="card-title display-5 text-info">Denah Siskom</h5>
+                                    <p class="card-text display-2 text-center text-success"><?= $countglm?><span
                                             class="text-danger font-small"> Ruangan</span></p>
                                 </div>
 

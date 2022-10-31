@@ -1,12 +1,6 @@
 <?php
-
-
-require 'UserControllers/HomeControllers.php';
-
-
-
-
-
+require 'HomeControllers/HomeControllers.php';
+require 'HomeControllers/LangController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +23,9 @@ require 'UserControllers/HomeControllers.php';
     <!-- Fontawesome -->
     <link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
+
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
     <!-- Pixel CSS -->
     <link type="text/css" href="./css/neumorphism.css" rel="stylesheet">
 
@@ -72,27 +69,27 @@ require 'UserControllers/HomeControllers.php';
                         </li>
                         <li>
                             <a href="#room" class="nav-link list-style-none">
-                                <span class="btn btn-pill btn-primary">Room Guide</span>
+                                <span class="btn btn-pill btn-primary"><?= $lang ["Room Guide"];?></span>
                             </a>
                         </li>
                         <li>
                             <a href="#contact" class="nav-link list-style-none">
-                                <button class="btn btn-pill btn-primary">Contact Us</button>
+                                <button class="btn btn-pill btn-primary"><?= $lang ["Contact Us"];?></button>
                             </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
                                 <span class="btn btn-pill">
-                                    <span class="nav-link-inner-text">Language</span>
+                                    <span class="nav-link-inner-text"><?= $lang ["Language"];?></span>
                                     <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="">indonesia</a></li>
-                                <li><a class="dropdown-item" href="">English</a></li>
-                                <li><a class="dropdown-item" href="">Korea</a></li>
-                                <li><a class="dropdown-item" href="">Jepang</a></li>
-                                <li><a class="dropdown-item" href="">Malaysia</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=idn">indonesia</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=eng">English</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=jpn">Japanese</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=krn">Korean</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=arb">Arabic</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -115,12 +112,11 @@ require 'UserControllers/HomeControllers.php';
         <div class="container z-2">
             <div class="row justify-content-center text-center pt-6">
                 <div class="col-lg-8 col-xl-8">
-                    <h1 class="display-2 mt-3 mb-3">Virtual Tour MIPA Tanjungpura University</h1>
-                    <p class="mb-5">Feel The Fun Experience of a<strong> Virtual Tour </strong>With a Guide in The MIPA
-                        Faculty Area of Tanjungpura University</p>
+                    <h1 class="display-2 mt-3 mb-3"><?= $lang ["Virtual Tour MIPA Tanjungpura University"];?></h1>
+                    <p class="mb-5"><?= $lang ["Feel The Fun Experience of a Virtual Tour With a Guide in The MIPA Faculty Area of Tanjungpura University"];?></p>
                     <div class="d-flex flex-column flex-wrap flex-md-row justify-content-md-center mb-5">
                         <a href="virtualtour.php" class="btn btn-primary mb-3 mb-lg-0 mr-3"><i
-                                class="fa fa-binoculars mr-2"></i>Let's Start Begin</a>
+                                class="fa fa-binoculars mr-2"></i><?= $lang ["Let's Start Begin"];?></a>
                     </div>
                 </div>
             </div>
@@ -136,10 +132,9 @@ require 'UserControllers/HomeControllers.php';
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-8 text-center mb-3">
-                        <h1 class="display-2 font-weight-light">Room <span class="font-weight-bold">Guide</span>
+                        <h1 class="display-2 font-weight-bold"><?= $lang ["Room Guide"];?></span>
                         </h1>
-                        <p class="lead">Helping you in finding a route to a room in the Mathematics and Natural Sciences
-                            faculty. Choose one of the rooms that you want to know the location of the class.</p>
+                        <p class="lead"><?= $lang ["Helping you in finding a route to a room in the Mathematics and Natural Sciences Faculty. Choose one of the rooms that you want to know the location of the class."];?></p>
                     </div>
                 </div>
             </div>
@@ -148,193 +143,330 @@ require 'UserControllers/HomeControllers.php';
             <div class="container">
                 <div class="row">
 
-                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="col-12 col-md-6 col-lg-6 mb-5 mt-3 mb-lg-0">
                         <div class="card bg-primary shadow-soft border-light p-4">
 
                             <!-- Header -->
                             <div class="card-header border-bottom text-center">
                                 <span class="d-block">
                                     <span class="display-3 font-weight-bold">
-                                        Gedung <br> Baru</span>
+                                        Gedung Baru</span>
                                 </span>
                             </div>
                             <!-- End Header -->
 
                             <!-- Content -->
-                            <div class="card-body">
 
-                                <form action="" method="post">
-                                    <div class="input-group mb-4">
-                                        <input name="keyword" class="form-control" placeholder="Search title room" type="text">
-                                        <div class="input-group-prepend">
-                                            <button class="btn pi btn-primary" type="submit" name="search"><span
-                                                    class="fas fa-search"></span></button>
-                                        </div>
-                                </form>
-
-                            </div>
-                            <?php foreach( $gedungbaru as $gbr ) : ?>
-                            <tr>
-                                <td>
-                                    <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
-                                        data-toggle="modal" data-target="#modaldetail<?= $gbr ["id"];?>"><span
-                                            class="fas fa-home mr-2"></span><span>Ruangan
-                                        </span><?= $gbr ["nama"];?>
-                                    </a>
-                                </td>
-                            </tr>
-                            <!-- Modal Content -->
-
-                            <div class="modal fade" id="modaldetail<?= $gbr ["id"];?>" tabindex="-1" role="dialog"
-                                aria-labelledby="modaldetail" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                    <div class="modal-content shadow-soft">
-                                        <div class="modal-header">
-                                            <div class="modal-title display-4">Detail ruangan</div>
-                                            <button type="button" class="close ml-auto" data-dismiss="modal"
-                                                aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body px-6">
-                                            <div class="py-3">
-                                                <div class="text-center">
-                                                    <img width="100%"
-                                                        src="./assets/img/denah/<?= $gbr ["denah"]; ?>"></img>
-
-                                                    <div class="nav-wrapper position-relative">
-                                                        <ul class="nav nav-pills nav-fill flex-column flex-md-row">
-                                                            <li class="nav-item">
-                                                                <span class="nav-link shadow-inset"><span>Ruangan
-                                                                    </span><?= $gbr ["nama"];?></span>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <span class="nav-link shadow-inset"><span>Luas
-                                                                    </span><?= $gbr ["luas"];?>
-                                                                    m<sup>2</sup></span>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <span class="nav-link shadow-inset"><span>Kapasitas
-                                                                    </span><?= $gbr ["kapasitas"];?>
-                                                                    orang</span>
-                                                            </li>
-                                                        </ul>
+                            <table  id="gbr1" width="100%" cellspacing="">
+                                <thead>
+                                    <tr>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach( $gedungbaru as $gbr ) : ?>
+                                    <tr>
+                                        <td>
+                                            <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
+                                                data-toggle="modal" data-target="#modaldetail<?= $gbr ["id"];?>"><span
+                                                    class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
+                                                </span><?= $gbr ["nama"];?>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <!-- modal -->
+                                    <div class="modal fade" id="modaldetail<?= $gbr ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content shadow-soft">
+                                                <div class="modal-header">
+                                                    <div class="modal-title display-4"><?= $lang ["Room Detail"];?></div>
+                                                    <button type="button" class="close ml-auto" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body px-6">
+                                                    <div class="py-3">
+                                                        <div class="text-center">
+                                                            <img width="100%"
+                                                                src="./assets/img/denah/<?= $gbr ["denah"]; ?>"></img>
+                                                            <div class="nav-wrapper position-relative">
+                                                                <ul
+                                                                    class="nav nav-pills nav-fill flex-column flex-md-row">
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Room"];?>
+                                                                            </span><?= $gbr ["nama"];?></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Large"];?>
+                                                                            </span><?= $gbr ["luas"];?>
+                                                                            m<sup>2</sup></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Capacity"];?>
+                                                                            </span><?= $gbr ["kapasitas"];?>
+                                                                            <?= $lang ["peoples"];?></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+
+
+
+                            <!-- End Content -->
+                        </div>
+                    </div>
+
+                    <!-- -------------------------------------------------------------------------------------------------- -->
+
+                    <div class="col-12 col-md-6 col-lg-6 mb-5 mt-3 mb-lg-0">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <!-- Header -->
+                            <div class="card-header border-bottom text-center">
+                                <span class="d-block">
+                                    <span class="display-3 font-weight-bold">
+                                        Gedung Lama</span>
+                                </span>
                             </div>
-                            <?php endforeach; ?>
+                            <!-- End Header -->
+                            <!-- Content -->
+                            <table id="glm1" width="100%" cellspacing="">
+                                <thead>
+                                    <tr>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach( $gedunglama as $glm ) : ?>
+                                    <tr>
+                                        <td>
+                                            <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
+                                                data-toggle="modal" data-target="#modaldetail<?= $glm ["id"];?>"><span
+                                                    class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
+                                                </span><?= $glm ["nama"];?>
+                                            </a>
+                                        </td>
 
-                            <!-- paging -->
-                            <nav aria-label="Posts navigation example"
-                                class="d-flex flex-row justify-content-center align-items-center mt-4">
-                                <ul class="pagination pagination-sm">
+                                    </tr>
+                                    <div class="modal fade" id="modaldetail<?= $glm ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content shadow-soft">
+                                                <div class="modal-header">
+                                                    <div class="modal-title display-4"><?= $lang ["Room Detail"];?></div>
+                                                    <button type="button" class="close ml-auto" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body px-6">
+                                                    <div class="py-3">
+                                                        <div class="text-center">
+                                                            <img width="100%"
+                                                                src="./assets/img/denah/<?= $glm ["denah"]; ?>"></img>
+                                                            <div class="nav-wrapper position-relative">
+                                                                <ul
+                                                                    class="nav nav-pills nav-fill flex-column flex-md-row">
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Room"];?>
+                                                                            </span><?= $glm ["nama"];?></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Large"];?>
+                                                                            </span><?= $glm ["luas"];?>
+                                                                            m<sup>2</sup></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Capacity"];?>
+                                                                            </span><?= $glm ["kapasitas"];?>
+                                                                            <?= $lang ["peoples"];?></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End Content -->
 
-                                    <li class="page-item">
-                                        <a class="page-link" href="1">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="">4</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="">5</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="">6</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="">7</a>
-                                    </li>
-
-                                </ul>
-                            </nav>
-                            <!-- paging end-->
                         </div>
-                        <!-- End Content -->
                     </div>
-                </div>
 
-                <!-- -------------------------------------------------------------------------------------------------- -->
+                    <!-- -------------------------------------------------------------------------------------------------- -->
 
-                <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
-                    <div class="card bg-primary shadow-soft border-light p-4">
-                        <!-- Header -->
-                        <div class="card-header border-bottom text-center">
-                            <span class="d-block">
-                                <span class="display-3 font-weight-bold">
-                                    Gedung Lama</span>
-                            </span>
+                    <div class="col-12 col-md-6 col-lg-6 mb-5 mt-3 mb-lg-0">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <!-- Header -->
+                            <div class="card-header border-bottom text-center">
+                                <span class="d-block">
+                                    <span class="display-3 font-weight-bold">
+                                        Gedung Biotek</span>
+                                </span>
+                            </div>
+                            <!-- End Header -->
+                            <!-- Content -->
+                            <table id="bio1" width="100%" cellspacing="">
+                                <thead>
+                                    <tr>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach( $biotek as $bio ) : ?>
+                                    <tr>
+                                        <td>
+                                            <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
+                                                data-toggle="modal" data-target="#modaldetail<?= $bio ["id"];?>"><span
+                                                    class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
+                                                </span><?= $bio ["nama"];?>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    <div class="modal fade" id="modaldetail<?= $bio ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content shadow-soft">
+                                                <div class="modal-header">
+                                                    <div class="modal-title display-4"><?= $lang ["Room Detail"];?></div>
+                                                    <button type="button" class="close ml-auto" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body px-6">
+                                                    <div class="py-3">
+                                                        <div class="text-center">
+                                                            <img width="100%"
+                                                                src="./assets/img/denah/<?= $bio ["denah"]; ?>"></img>
+                                                            <div class="nav-wrapper position-relative">
+                                                                <ul
+                                                                    class="nav nav-pills nav-fill flex-column flex-md-row">
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Room"];?>
+                                                                            </span><?= $bio ["nama"];?></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Large"];?>
+                                                                            </span><?= $bio ["luas"];?>
+                                                                            m<sup>2</sup></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Capacity"];?>
+                                                                            </span><?= $bio ["kapasitas"];?>
+                                                                            <?= $lang ["peoples"];?></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End Content -->
                         </div>
-                        <!-- End Header -->
-                        <!-- Content -->
-                        <div class="card-body">
-
-                            <a type="button" class="btn btn-primary btn-block" tabindex="0"><span
-                                    class="fas fa-home mr-2"></span>F 11</a>
-
-                        </div>
-                        <!-- End Content -->
                     </div>
-                </div>
+                    <!-- -------------------------------------------------------------------------------------------------- -->
 
-                <!-- -------------------------------------------------------------------------------------------------- -->
+                    <div class="col-12 col-md-6 col-lg-6 mb-5 mt-3 mb-lg-0">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <!-- Header -->
+                            <div class="card-header border-bottom text-center">
+                                <span class="d-block">
+                                    <span class="display-3 font-weight-bold">
+                                        Gedung Siskom</span>
+                                </span>
+                            </div>
+                            <!-- End Header -->
+                            <!-- Content -->
+                            <table id="sis1" width="100%" cellspacing="">
+                                <thead>
+                                    <tr>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach( $siskom as $sis ) : ?>
+                                    <tr>
+                                        <td>
+                                            <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
+                                                data-toggle="modal" data-target="#modaldetail<?= $sis ["id"];?>"><span
+                                                    class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
+                                                </span><?= $sis ["nama"];?>
+                                            </a>
+                                        </td>
 
-                <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
-                    <div class="card bg-primary shadow-soft border-light p-4">
-                        <!-- Header -->
-                        <div class="card-header border-bottom text-center">
-                            <span class="d-block">
-                                <span class="display-3 font-weight-bold">
-                                    Gedung Biotek</span>
-                            </span>
+                                    </tr>
+                                    <div class="modal fade" id="modaldetail<?= $sis ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content shadow-soft">
+                                                <div class="modal-header">
+                                                    <div class="modal-title display-4"><?= $lang ["Room Detail"];?></div>
+                                                    <button type="button" class="close ml-auto" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body px-6">
+                                                    <div class="py-3">
+                                                        <div class="text-center">
+                                                            <img width="100%"
+                                                                src="./assets/img/denah/<?= $sis ["denah"]; ?>"></img>
+                                                            <div class="nav-wrapper position-relative">
+                                                                <ul
+                                                                    class="nav nav-pills nav-fill flex-column flex-md-row">
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Room"];?>
+                                                                            </span><?= $sis ["nama"];?></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Large"];?>
+                                                                            </span><?= $sis ["luas"];?>
+                                                                            m<sup>2</sup></span>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <span class="nav-link shadow-inset"><span><?= $lang ["Capacity"];?>
+                                                                            </span><?= $sis ["kapasitas"];?>
+                                                                            <?= $lang ["peoples"];?></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End Content -->
                         </div>
-                        <!-- End Header -->
-                        <!-- Content -->
-                        <div class="card-body">
-
-                            <a type="button" class="btn btn-primary btn-block" tabindex="0"><span
-                                    class="fas fa-home mr-2"></span>F 11</a>
-
-                        </div>
-                        <!-- End Content -->
                     </div>
+
+                    <!-- -------------------------------------------------------------------------------------------------- -->
+
                 </div>
-                <!-- -------------------------------------------------------------------------------------------------- -->
-
-                <div class="col-12 col-md-6 col-lg-4 mb-5 mt-4 mb-lg-0">
-                    <div class="card bg-primary shadow-soft border-light p-4">
-                        <!-- Header -->
-                        <div class="card-header border-bottom text-center">
-                            <span class="d-block">
-                                <span class="display-3 font-weight-bold">
-                                    Gedung Siskom</span>
-                            </span>
-                        </div>
-                        <!-- End Header -->
-                        <!-- Content -->
-                        <div class="card-body">
-
-                            <a type="button" class="btn btn-primary btn-block" tabindex="0"><span
-                                    class="fas fa-home mr-2"></span>F 11</a>
-
-                        </div>
-                        <!-- End Content -->
-                    </div>
-                </div>
-
-                <!-- -------------------------------------------------------------------------------------------------- -->
-
             </div>
-        </div>
         </div>
     </section>
 
@@ -350,17 +482,14 @@ require 'UserControllers/HomeControllers.php';
                             <div class="row justify-content-center">
                                 <div class="col-12">
                                     <div class="shadow-inset p-4 mb-5 rounded">
-                                        <!-- <iframe class="map rounded"
+                                        <iframe class="map rounded" id="gmap_canvas"
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599127523ec9%3A0x752e4fa340c5556d!2sFaculty%20of%20Math%20and%20Science!5e0!3m2!1sen!2sid!4v1659164539498!5m2!1sen!2sid"></iframe>
-                                        <iframe class="map rounded"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5997490ab8af%3A0xb02b9eb4bf2f6b94!2sGedung%20Baru%20FMIPA%20Untan!5e0!3m2!1sen!2sid!4v1659165046659!5m2!1sen!2sid"></iframe> -->
-                                    </div>
+                                            
+                                        </div>
                                 </div>
                                 <div class="col-12 col-md-8 text-center mb-5">
-                                    <h1 class="display-2 mb-3">Get in touch</h1>
-                                    <p class="lead">Want to know more? You can interact with us through the platform
-                                        provided below. Warm greetings from us Faculty of Mathematics and Natural
-                                        Sciences, University of Tanjungpura.</p>
+                                    <h1 class="display-2 mb-3"><?= $lang ["Contact Us"];?></h1>
+                                    <p class="lead"><?= $lang ["Want to know more? You can interact with us through the platform provided below. Warm greetings from us Faculty of Mathematics and Natural Sciences, University of Tanjungpura."];?></p>
                                 </div>
                             </div>
                             <div class="row mb-5">
@@ -370,7 +499,7 @@ require 'UserControllers/HomeControllers.php';
                                         <div class="icon icon-shape shadow-soft border-light rounded-circle mb-4">
                                             <span class="fas fa-map-marker-alt"></span>
                                         </div>
-                                        <h2 class="h5 icon-box-title">Visit us</h2>
+                                        <h2 class="h5 icon-box-title"><?= $lang ["Visit us"];?></h2>
                                         <span>
                                             JL. Prof. Dr. H. Hadari Nawawi
                                             <br>
@@ -448,6 +577,10 @@ require 'UserControllers/HomeControllers.php';
     <script src="./vendor/prismjs/prism.js"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/datatable/datatables-demo.js"></script>
 
     <!-- Neumorphism JS -->
     <script src="./assets/js/neumorphism.js"></script>

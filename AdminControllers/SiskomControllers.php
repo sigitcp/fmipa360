@@ -3,7 +3,7 @@ include '../AdminControllers/Db.php';
 
 
 
-function createsiskom($data){
+function create($data){
     global $conn;
     $nama = htmlspecialchars($data["nama"]);
     $luas = htmlspecialchars($data["luas"]);
@@ -57,7 +57,7 @@ function upload(){
 }
 
 
-function editsiskom($data){
+function edit($data){
   global $conn;
   $id = $data["id"];
   $nama = htmlspecialchars($data["nama"]);
@@ -99,7 +99,7 @@ function query($query) {
 
 if( isset($_POST["edit"]) ) {
 
-    if( editsiskom($_POST) > 0 ){
+    if( edit($_POST) > 0 ){
         echo "<script>
                 alert('Data Berhasil Ditambahkan!');
                 document.location.href = '../admin/siskom.php';
@@ -115,7 +115,7 @@ if( isset($_POST["edit"]) ) {
 
 if( isset($_POST["create"]) ) {
 
-  if( createsiskom($_POST) > 0 ){
+  if( create($_POST) > 0 ){
       echo "<script>
               alert('Data Berhasil Ditambahkan!');
               document.location.href = '../admin/siskom.php';
