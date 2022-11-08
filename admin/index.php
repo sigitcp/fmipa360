@@ -61,9 +61,9 @@ require '../AdminControllers/DashboardControllers.php';
                                         class="fas fa-map-signs mr-2"></span>Siskom</button>
                             </a>
                         </div>
-                        <a class="nav-link" href="">
-                            <button type="button" class="btn shadow-inset btn-primary btn-block" tabindex="0"><span
-                                    class=""></span>Data raw</button>
+                        <a class="nav-link" href="https://drive.google.com/drive/folders/1JPwFZvCkC4MbpnhLUdHAqJkm9xExaWkK?usp=sharing" target="blank">
+                            <button type="button" class="btn btn-primary btn-block" tabindex="0"><span
+                                    class=""></span>Raw data</button>
                         </a>
                         
                     </div>
@@ -119,7 +119,7 @@ require '../AdminControllers/DashboardControllers.php';
 
                                 <div class="card-body">
                                     <h5 class="card-title display-5 text-info">Denah Siskom</h5>
-                                    <p class="card-text display-2 text-center text-success"><?= $countglm?><span
+                                    <p class="card-text display-2 text-center text-success"><?= $countsis?><span
                                             class="text-danger font-small"> Ruangan</span></p>
                                 </div>
 

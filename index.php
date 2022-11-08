@@ -15,7 +15,6 @@ require 'HomeControllers/LangController.php';
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon.png">
-    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
     <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -85,11 +84,11 @@ require 'HomeControllers/LangController.php';
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.php?lang=idn">indonesia</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=idn">Indonesia</a></li>
                                 <li><a class="dropdown-item" href="index.php?lang=eng">English</a></li>
-                                <li><a class="dropdown-item" href="index.php?lang=jpn">Japanese</a></li>
+                                <!-- <li><a class="dropdown-item" href="index.php?lang=jpn">Japanese</a></li>
                                 <li><a class="dropdown-item" href="index.php?lang=krn">Korean</a></li>
-                                <li><a class="dropdown-item" href="index.php?lang=arb">Arabic</a></li>
+                                <li><a class="dropdown-item" href="index.php?lang=arb">Arabic</a></li> -->
                             </ul>
                         </li>
                     </ul>
@@ -250,15 +249,15 @@ require 'HomeControllers/LangController.php';
                                     <tr>
                                         <td>
                                             <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
-                                                data-toggle="modal" data-target="#modaldetail<?= $glm ["id"];?>"><span
+                                                data-toggle="modal" data-target="#modaldetaillm<?= $glm ["id"];?>"><span
                                                     class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
                                                 </span><?= $glm ["nama"];?>
                                             </a>
                                         </td>
 
                                     </tr>
-                                    <div class="modal fade" id="modaldetail<?= $glm ["id"];?>" tabindex="-1"
-                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                    <div class="modal fade" id="modaldetaillm<?= $glm ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetaillm" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content shadow-soft">
                                                 <div class="modal-header">
@@ -330,15 +329,15 @@ require 'HomeControllers/LangController.php';
                                     <tr>
                                         <td>
                                             <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
-                                                data-toggle="modal" data-target="#modaldetail<?= $bio ["id"];?>"><span
+                                                data-toggle="modal" data-target="#modaldetailbio<?= $bio ["id"];?>"><span
                                                     class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
                                                 </span><?= $bio ["nama"];?>
                                             </a>
                                         </td>
 
                                     </tr>
-                                    <div class="modal fade" id="modaldetail<?= $bio ["id"];?>" tabindex="-1"
-                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                    <div class="modal fade" id="modaldetailbio<?= $bio ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetailbio" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content shadow-soft">
                                                 <div class="modal-header">
@@ -408,15 +407,15 @@ require 'HomeControllers/LangController.php';
                                     <tr>
                                         <td>
                                             <a type="button" class="btn btn-primary btn-block mb-2" tabindex="0"
-                                                data-toggle="modal" data-target="#modaldetail<?= $sis ["id"];?>"><span
+                                                data-toggle="modal" data-target="#modaldetailsis<?= $sis ["id"];?>"><span
                                                     class="fas fa-home mr-2"></span><span><?= $lang ["Room"];?>
                                                 </span><?= $sis ["nama"];?>
                                             </a>
                                         </td>
 
                                     </tr>
-                                    <div class="modal fade" id="modaldetail<?= $sis ["id"];?>" tabindex="-1"
-                                        role="dialog" aria-labelledby="modaldetail" aria-hidden="true">
+                                    <div class="modal fade" id="modaldetailsis<?= $sis ["id"];?>" tabindex="-1"
+                                        role="dialog" aria-labelledby="modaldetailsis" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                             <div class="modal-content shadow-soft">
                                                 <div class="modal-header">
@@ -482,9 +481,9 @@ require 'HomeControllers/LangController.php';
                             <div class="row justify-content-center">
                                 <div class="col-12">
                                     <div class="shadow-inset p-4 mb-5 rounded">
-                                        <iframe class="map rounded" id="gmap_canvas"
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599127523ec9%3A0x752e4fa340c5556d!2sFaculty%20of%20Math%20and%20Science!5e0!3m2!1sen!2sid!4v1659164539498!5m2!1sen!2sid"></iframe>
-                                            
+                                        <iframe class="map rounded" 
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816225080557!2d109.34614095765701!3d-0.05871922565173634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599127523ec9%3A0x752e4fa340c5556d!2sFaculty%20of%20Math%20and%20Science!5e0!3m2!1sen!2sid!4v1659164539498!5m2!1sen!2sid">
+                                        </iframe>  
                                         </div>
                                 </div>
                                 <div class="col-12 col-md-8 text-center mb-5">

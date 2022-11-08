@@ -14,7 +14,6 @@ require 'HomeControllers/LangController.php';
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon.png">
-    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
     <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
